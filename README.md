@@ -7,6 +7,13 @@ Welcome to **Globetrotter** – a thrilling web app where you decode cryptic clu
 - **Multiplayer Mode**: Challenge friends and compete for the highest score flex.
 - **Seamless Experience**: Fast and responsive UI built with modern web technologies.
 - **Leaderboard**: Track your progress and compare with your friends.
+## 🏛️ Architecture Diagram
+
+![Untitled-2025-03-16-0047](https://github.com/user-attachments/assets/1f3f34e5-854c-4b80-8abc-ce67604d8b5b)
+
+## 🎥 Demo Video 
+[Check out the illustrative video here ]()
+
 ## 🛠 Tech Stack
 The Globetrotter Challenge leverages cutting-edge web technologies to deliver a seamless and engaging experience:
 - **[Vite](https://vite.dev/)** - A lightning-fast build tool for modern web applications.

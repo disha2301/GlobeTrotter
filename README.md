@@ -12,7 +12,7 @@ Welcome to **Globetrotter** – a thrilling web app where you decode cryptic clu
 ![Untitled-2025-03-16-0047](https://github.com/user-attachments/assets/1f3f34e5-854c-4b80-8abc-ce67604d8b5b)
 
 ## 🎥 Demo Video 
-[Check out the illustrative video here ](https://github.com/user-attachments/assets/c77ad893-a7cf-44ca-ac28-647a4d897732)
+[Check out the illustrative video here ](https://github.com/user-attachments/assets/9be12ca5-f389-4f37-8bd9-0eed557c0a4d)
 
 ## 🛠 Tech Stack
 The Globetrotter Challenge leverages cutting-edge web technologies to deliver a seamless and engaging experience:

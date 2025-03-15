@@ -78,7 +78,6 @@ const Index = () => {
 
     if (username) {
       localStorage.removeItem(`globetrotter_score_${username}`);
-      localStorage.removeItem(`globetrotter_gameState_${username}`);
     }
 
     setUsername(null);
@@ -92,46 +91,24 @@ const Index = () => {
     setShowChallengeModal(false);
     setShowLeaderboard(false);
   };
-
   useEffect(() => {
     if (username) {
-      const gameState = {
-        score,
-        username,
-        showChallengeModal,
-        showLeaderboard,
-        challengerInfo,
-        isGameOwner,
-      };
       localStorage.setItem(
-        `globetrotter_gameState_${username}`,
-        JSON.stringify(gameState)
+        `globetrotter_score_${username}`,
+        JSON.stringify(score)
       );
     }
-  }, [
-    score,
-    username,
-    showChallengeModal,
-    showLeaderboard,
-    challengerInfo,
-    isGameOwner,
-  ]);
+  }, [score, username]);
 
   useEffect(() => {
     const savedUsername = localStorage.getItem("globetrotter_username");
+
     if (savedUsername) {
-      const savedGameState = localStorage.getItem(
-        `globetrotter_gameState_${savedUsername}`
-      );
-      if (savedGameState) {
-        const gameState = JSON.parse(savedGameState);
-        setScore(gameState.score);
-        setUsername(gameState.username);
-        setShowChallengeModal(gameState.showChallengeModal);
-        setShowLeaderboard(gameState.showLeaderboard);
-        setChallengerInfo(gameState.challengerInfo);
-        setIsGameOwner(gameState.isGameOwner);
-      }
+      getUserProfile(savedUsername).then((profile) => {
+        if (profile) {
+          setUsername(savedUsername);
+        }
+      });
     }
   }, []);
 
@@ -149,6 +126,7 @@ const Index = () => {
         {username ? (
           <>
             <div className="w-full flex flex-col items-center mt-8 sm:mt-12">
+              {}
               <div className="w-full flex justify-between items-center mb-6">
                 <div className="flex items-center space-x-2">
                   <div className="flex items-center bg-gradient-to-r from-indigo-100 to-purple-100 px-3 py-1 rounded-full border border-indigo-200">
@@ -175,6 +153,7 @@ const Index = () => {
                     <span className="hidden sm:inline">Challenge a Friend</span>
                   </button>
 
+                  {}
                   {isGameOwner && (
                     <ResetGameButton
                       username={username}
@@ -219,6 +198,7 @@ const Index = () => {
           <div className="w-full flex flex-col items-center mt-8 sm:mt-12 animate-fade-in">
             <UserProfileForm onProfileCreated={handleProfileCreated} />
 
+            {}
             {challengerInfo && (
               <div className="mt-4 p-4 bg-gradient-to-r from-amber-100 to-yellow-100 border border-amber-200 rounded-lg text-center max-w-md">
                 <p className="text-amber-800">

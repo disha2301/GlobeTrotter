@@ -12,7 +12,7 @@ Welcome to **Globetrotter** – a thrilling web app where you decode cryptic clu
 ![Untitled-2025-03-16-0047](https://github.com/user-attachments/assets/1f3f34e5-854c-4b80-8abc-ce67604d8b5b)
 
 ## 🎥 Demo Video 
-[Check out the illustrative video here ]()
+[Check out the illustrative video here ](https://github.com/user-attachments/assets/c77ad893-a7cf-44ca-ac28-647a4d897732)
 
 ## 🛠 Tech Stack
 The Globetrotter Challenge leverages cutting-edge web technologies to deliver a seamless and engaging experience:
@@ -66,3 +66,7 @@ npm run dev
 ```
 Navigate to http://localhost:8082 to see your application in action.
 
+## 🔎 Future Scope
+- Separate frontend and backend architecture
+- Chat Feature: Allow players to interact during the quiz
+- Voice and AI Integration
